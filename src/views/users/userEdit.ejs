@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Edita tu usuario</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="/css/registerstyles.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <div class="cuerpo-registro">
+        <main>
+                <form class="registro-popup registro-popup1" action="/users/editsubmit/<%= userToEdit.userId %>?_method=PUT" method="POST" enctype="multipart/form-data" style="margin:auto;">
+                    <div class="formRegistro-izquierdo" style="width:100%;">
+                        <div class="logo-registro" style="border-right: 0px;"> 
+                            <a href="/"><img src="/images/Shapepng2.svg" alt="Logo a Color Full Shape" style="width:174.5px;"></a>
+                                <!-- <h1>Full Shape</h1> -->
+                        </div>  
+                        <h1 class="registrate">Actualiza tus datos</h1> 
+                        <h6 class="requerido">los campos con asterisco deben ser completados</h6>
+                    <!-- Aquí van los campos -->
+        
+                        <div style="border-right: 0px;">
+                            <label for="userNames">Nombres</label><label class="requerido">  *</label><br>
+                            <input type="text" name="userNames" value="<%= userToEdit.userNames %>" ><br>
+                            <% if(locals.errors && errors.userNames) { %>
+                                <p class="requerido"><%= errors.userNames.msg %></p>
+                            <% } %>
+                        </div>
+                        <div style="border-right: 0px;">
+                            <label for="userLastNames">Apellidos</label><label class="requerido">  *</label><br>
+                            <input type="text" name="userLastNames" value="<%= userToEdit.userLastNames %>"><br>
+                            <% if(locals.errors && errors.userLastNames) { %>
+                                <p class="requerido"><%= errors.userLastNames.msg %></p>
+                            <% } %>
+                        </div>
+                        <div style="border-right: 0px;">
+                            <label for="userPhone">Número de teléfono</label><br>
+                            <input type="number" name="userPhone" value="<%= userToEdit.userPhone %>"><br>
+                        </div>
+                        <div style="border-right: 0px;">
+                            <label for="userEmail">Email</label><label class="requerido">  *</label><br>
+                            <input type="text" name="userEmail" value="<%= userToEdit.userEmail %>"><br>
+                            <% if(locals.errors && errors.userEmail) { %>
+                                <p class="requerido"><%= errors.userEmail.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="recibir-ofertas" style="border-right: 0px;">
+                            <label class="recibir-ofertas">Recibir ofertas y novedades</label>
+                            <input class="radio" type="radio" name="userReceiveOffersAndNews"
+                            value="1" <% if (userToEdit.userReceiveOffersAndNews == 1) { %> checked <% } %>
+                            ><label>Sí</label>
+                            <input class="radio" type="radio" name="userReceiveOffersAndNews"
+                            value="0" <% if (userToEdit.userReceiveOffersAndNews == 0) { %> checked <% } %>
+                            ><label>No</label><br>
+                        </div>
+                        <div style="border-right: 0px;">
+                            <label for="userPassword">Cambiar Contraseña</label> (Opcional)<br>
+                            <input type="password" name="userPassword"><br>
+                            <h6>(?) la contraseña debe poseer al menos 8 caracteres</h6>
+                            <% if(locals.errors && errors.userPassword) { %>
+                                <p class="requerido"><%= errors.userPassword.msg %></p>
+                            <% } %>
+                        </div>
+                        <div style="border-right: 0px;">
+                            <label for="contraseña">Confirmar nueva Contraseña</label> (Opcional)<br>
+                            <input type="password" name="PasswordConfirmation"><br>
+                            <% if(locals.errors && errors.PasswordConfirmation) { %>
+                                <p class="requerido"><%= errors.PasswordConfirmation.msg %></p>
+                            <% } %>
+                        </div>
+                        <div style="border-right: 0px;">
+                            <label for="userImage">Cambiar Imagen del usuario</label> (Opcional)<br>
+                            <input type="file" name="userImage" id="userImage"><br>
+                            <% if(locals.errors && errors.userImage) { %>
+                                <p class="requerido"><%= errors.userImage.msg %></p>
+                            <% } %>
+                        </div>
+                        <div class="logo-registro" style="border-right: 0px;"> 
+                            <a href="/"><img src="/images/users/<%= userToEdit.userImage %>" alt="Logo a Color Full Shape" style="width:35%;"></a>
+                                <!-- <h1>Full Shape</h1> -->
+                        </div>  
+
+                            <div class="botones" style="border-right: 0px;">
+                            <p><button type="submit">Guardar cambios</button></p> 
+                        </div>
+                    </div>
+                </form>
+        </main>
+        <%- include("../partials/footer") %>
+        </div>
+    </body>
+</html>

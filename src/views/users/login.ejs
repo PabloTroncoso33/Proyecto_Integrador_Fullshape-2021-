@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Identifícate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="/css/loginstyles.css">
+    </head>
+    <body class="login">
+        <!-- <img src="/images/loginRegister-background.png" alt="loginRegister-background"> -->
+        <div class="cuerpo-login">
+        <header>
+            <div class="login-header">
+                <div class="logo-login"> 
+                    <a href="/"><img src="/images/Shapepng2.svg" alt="Logo a Color Full Shape"></a>
+                    <!-- <h1>Full Shape</h1> -->
+                </div>
+                <p>
+                    DEPORTES.SUPLEMENTOS.REHABILITACION
+                </p>
+                <h1 class="inicia-sesion">Iniciá sesión y llena tu carrito</h1>
+                <div class="carrito-login"> 
+                    <img src="/images/carrito.svg" alt="Logo Verde FullShape">
+                </div>
+            </nav>
+        </header>
+        <main>
+            <form class="login" action="/users/login" method="POST">   
+                <!-- Aquí van los campos -->
+                <% if (locals.errors && errors.log) { %>
+                    <p style="color:red; text-align:center; font-size:18px"> <%= errors.log.msg %> </p>
+                <% } %>
+                <div class="login">
+                    <input type="text" name="userEmail" placeholder="Email" id="email">
+                    <p id="wrongEmail"></p>
+                    <% if(locals.errors && errors.userEmail) { %>
+                        <p style="color:red; text-align:center; font-size:18px"><%= errors.userEmail.msg %></p>
+                    <% } %>
+                </div>
+                <div class="login">
+                    <input type="password" name="userPassword" placeholder="Contraseña" id="password">
+                    <p id="wrongPassword"></p>
+                    <% if(locals.errors && errors.userPassword) { %>
+                        <p style="color:red; text-align:center; font-size:18px"><%= errors.userPassword.msg %></p>
+                    <% } %>
+                </div>
+                <div class="recordarme"> 
+                    <div>
+                        <label>Recordarme</label>
+                        <input type="radio" name="rememberMe">
+                    </div>
+                    <a href="#">Olvidaste tu contraseña?</a>
+                </div>
+                <div class="registrate">
+                    <a>Si no posees cuenta regístrate</a>
+                    <a href="/users/register">AQUI</a>
+                </div>
+                <div class="botonLogin">
+                    <button type="submit">Iniciar</button>
+                </div>
+                    
+                
+    
+            </form>
+        </main>
+        <%- include("../partials/footer") %>
+        </div>
+        <script src="/js/loginValidation.js"></script>
+    </body>
+</html>
+
+        

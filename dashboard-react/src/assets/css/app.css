@@ -1,0 +1,164 @@
+body {
+    margin: 0px;
+    background-image: url(../images/blue-pattern.jpg);
+}
+
+.navDiv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    border: 1px solid black;
+    background-color: #13D493;
+    margin-bottom: 5px;
+}
+
+.logo {
+    height: 100%;
+    width: 125px;
+}
+
+a {
+    margin: auto;
+}
+
+.pages {
+    width:858.6px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+span {
+    font-weight: bold;
+    margin-left:2px;
+}
+
+.lastProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxLP {
+  text-align: center;
+  width: 658px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border: 1px black solid;
+  background-color: #13D493;
+  border-radius: 10px;
+}
+
+.titleLP {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-top:10px;
+}
+
+.imageLP {
+    width: 90%;
+}
+
+.descriptionLP {
+    text-align: justify;
+    margin: 0px 5px;
+}
+
+.detailLP {
+    background-color: #13d493;
+    border-color: #4E5DBC;
+    width: 100px;
+    height: 33px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.detailLP:hover {
+    background-color: #4E5DBC;
+}
+
+.detail1LP {
+    text-align: start;
+    margin-left: 10px;
+}
+
+.detail1LP span {
+    font-size: 18px;
+}
+
+/* Estilos de tablas de valores totales */
+
+.totalsDiv {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    list-style-type: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: flex-end;
+}
+
+.totals {
+    display: flex;
+    margin: 100px auto;
+    justify-content: space-around;
+    list-style-type: none;
+    border: 1px solid black;
+    background-color: #13D493;
+    border-radius: 100px;
+}
+
+.totals2 {
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    margin: 100px auto;
+    justify-content: space-around;
+    list-style-type: none;
+    border: 1px solid black;
+    background-color: #13D493;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.totals:hover {
+    background-color: #00FFA9;
+    border-radius: 10px;
+}
+
+.totals2:hover {
+    background-color: #00FFA9;
+    border-radius: 10px;
+}
+
+.totals h1{
+padding:10px
+
+}
+/* Fin Estilos de tablas de valores totales */
+
+
+
+
+/*  Estilos de listado de productos */
+
+.listP {
+    list-style-type: none;
+    border: 1px solid black;
+    background-color: #13D493;
+    font-size: 18px;
+    width:50% ;
+    border-radius: 5px;
+}
+
+.listP:hover {
+    background-color: #00FFA9;
+}
+
+ul.products{
+    text-align: -webkit-center;
+}
+/* Fin Estilos de listado de productos */

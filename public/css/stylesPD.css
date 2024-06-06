@@ -1,0 +1,768 @@
+* {
+    margin: 0px;
+    font-family:Lato;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #13D493;
+    /*background-color: #83FACF;*/
+}
+
+nav {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0px;
+    /*border-bottom: 1px solid #03264C;*/
+    list-style-type: none;
+}
+
+li {
+    font-size: 17px;
+}
+
+#logo {
+    width: 43%;
+    height: 100px;
+}
+
+#logo img {
+    width:100%;
+    height: 100%;
+}
+
+.barra-busqueda {
+    width: 43%;
+    display: flex;
+    background-color: white;
+    border: 1px solid #00B276;
+    /*border: 1px solid #03264C;*/
+    height: 22px;
+    align-self: center;
+}
+
+form {
+    width: 100%;
+    height: 22px;
+}
+
+.busqueda {
+    width: 88%;
+    height: 22px;
+    padding: 0px;
+    border: 0px;
+    font-size: 18px;
+}
+
+.fa-magnifying-glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding:0px;
+    height: 100%;
+    width: 10%;
+}
+
+header a#cart {
+    display: flex;
+    width: 7.5%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.seleccionar-categoria {
+    text-align: center;
+    border-top: 2px solid #00B276;
+    padding: 2px;
+    /*border-top: 1px solid #03264C;
+    border-bottom: 1px solid #03264C;*/
+    width: 100%;
+    font-size: 18px;
+}
+
+.seleccionar-categoria p {
+    display: none;
+}
+
+.seleccionar-categoria form {
+    width: 100%;
+    padding: 2px 0px;
+}
+
+select {
+    height: 100%;
+}
+
+.user-menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-menu ul {
+    display: none;
+}
+
+
+.user-menu:hover ul {
+    display:block;
+    position: absolute;
+    right: 1px;
+    width: 89.963px;
+    margin-top: 20px;
+    border: 0px;
+    padding: 0px;
+    z-index: 1;
+    background-color: #13D493;
+}
+
+.user-menu:hover ul li {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 80px;
+    border: 1px solid black;
+    margin: 0px;
+}
+
+.user-menu:hover ul li a {
+    width: 100%;
+    font-size: 15px;
+}
+
+.user-menu:hover ul li form, .user-menu:hover ul li form button {
+    width: 100%;
+    height: 100%;
+    background-color: #13D493;
+    border: 0px;
+}
+
+.user-menu:hover ul li form button {
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #DBDDEA;
+}
+
+.article {
+    width:90%;
+    border: 1px solid black;
+    margin: 5% 0%;
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.carrusel-fotos {
+    width: 90%;
+    list-style-type: none;
+    border: 0px;
+    padding: 0px;
+}
+
+li#foto0, li#foto1, li#foto2, li#foto3, li#foto4 {
+    width: 200px;
+    border: 1px solid black;
+}
+
+ #c1  , #c2 , #c3 {
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.c img {
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.presentacion {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 90%;
+    margin-bottom: 5%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+h3 {
+    margin: 10px 0px;
+    padding-left: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding: 0px 10px;
+}
+
+p.pp {
+    font-size: 15.5px;
+    padding: 0px 5px;
+}
+
+.disponibilidad {
+    flex-basis: 100%;
+}
+
+#amountC {
+    background-color:white;
+    border-radius:10px;
+    border: 1px solid black;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+#amount {
+    height: 30px;
+    margin-top: 1px;
+}
+
+#descripcion {
+    margin: 10px 0px;
+    text-align: justify;
+}
+
+.fa-star {
+    color: yellow;
+}
+
+.detalle {
+    border: 1px solid black;
+    width: 90%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.detail {
+    text-align: justify;
+}
+
+ul.techspecs {
+    list-style-type:disc;
+    flex-direction: column;
+    align-items:flex-start;
+    box-sizing: border-box;
+    padding: 0px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+li.specs {
+    position: relative;
+    left: 30px;
+}
+
+.relacionados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:90%;
+    border: 1px solid black;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.relacionados h3 {
+    width: 100%;
+    text-align: left;
+}
+
+.relacionados .carrusel-fotos {
+    margin: 0% 5%;
+    margin-bottom: 10px;
+}
+
+.fa-arrow-left, .fa-arrow-right {
+    font-size: 20px;
+    color: #03264C;
+}
+
+.relacionados button {
+    height: 22px;
+    margin-bottom: 10px;
+    background-color: #83FACF;
+}
+
+main form#Add {
+    width: 180px;
+    margin: 0% 6% 5% 6%; 
+}
+
+main form#Add button {
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #13D493;
+    color: #00204D ;
+}
+
+main form#Add button:hover {
+    background-color:#ffd300;
+}
+
+main a#edit {
+    width: 120px;
+    margin: 0% 6% 5% 6%;
+}
+
+
+main form#delete {
+    width: 120px;
+    margin: 0% 6% 5% 6%;
+}
+
+main a#edit button {
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #13D493;
+    color: #00204D ;
+}
+
+main a#edit button:hover {
+    background-color: #ffd300;
+}
+
+main form#delete button {
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #13D493;
+    color: #00204D ;
+}
+
+main form#delete button:hover {
+    background-color: #ffd300;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.footer1, .footer2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border-top: 1px solid black;*/
+    background-color: #13D493; 
+    /*background-color: #83FACF;*/
+    width: 100%;
+    border-top: 2px solid #00B276;
+}
+.footer2 {
+    /*Añadí un borde mejor*/
+    justify-content: space-around;
+}
+.footer1 a {
+    width: 50%;
+}
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-top: 2px solid #00B276;
+    /*border-top: 1px solid black;*/
+    background-color: #13D493; 
+    /*background-color: #83FACF;*/
+    width: 100%;
+}
+.redes p {
+    margin: 0px auto;
+}
+#c6, #c7 {
+    border-radius: 10px;
+}
+
+#c6, #c7, #c8 {
+    width: 8%;
+    margin: 10px;
+    margin-left:auto;
+}
+
+#c6 img, #c7 img, #c8 img {
+    width: 100%;
+}
+
+@media (min-width:361px){
+    header {
+    justify-content: space-around;
+    background-image: url(../images/background-NUEVO2.jpg);
+    flex-direction: row;
+    background-size: cover;
+    }
+    
+    nav {
+    border: 2px solid #00b2765c;
+    background-color: #00b27680;
+    }
+    
+    ul {
+    font-variant-caps: all-small-caps;
+    font-weight: 800;
+    }
+    
+    #logo {
+    width: 295px;
+    height: 150px;
+    margin: 14px;
+    }
+    
+    .barra-busqueda {
+    margin-bottom: 15px;
+    width: 70%;
+    border: 0px solid #00B276;
+    height: 30.5px;
+    align-self: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    }
+    
+    .busqueda {
+    width: 84.5%;
+    height: 17px;
+    padding-top: 3px;
+    font-size: 20px;
+    margin-left: 5px;
+    }
+    
+    button {
+    height: 30.5px;
+    width: 31px;
+    border: none;
+    }
+    
+    header a#cart {
+    display: flex;
+    width: 35px;
+    height: 27px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    
+    .seleccionar-categoria {
+    border: 2px solid #00b2765c;
+    background-color: #00b27642;
+    width: 99%;
+    font-weight: bold;
+    }
+    
+    .seleccionar-categoria form {
+    display: flex;
+    padding: 10px 0px;
+    flex-direction: row;
+    justify-content: space-around;
+    }
+    
+    select {
+    font-size: 16px;
+    font-weight: bold;
+    width: 120px;
+    height: 23px;
+    }
+    
+    select#amount {
+    font-size: 16px;
+    font-weight: bold;
+    width: 40px;
+    height: 23px;
+    }
+    
+    .article {
+    border: 1px black;
+    box-shadow: 0px 12px 8px 4px grey;
+    }
+    
+    #amountC {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    }
+    
+    #amount {
+    width: 40px;
+    }
+    
+    .detalle {
+    margin-top: 25px;
+    }
+    
+    main form#Add {
+    display: flex;
+    width: 90%;
+    margin: 0% 5% 4% 6%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    }
+    
+    main form#Add button {
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+    color: #00204D;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    }
+    
+    .footer1, .footer2 {
+    background-image: url(../images/background-NUEVO2.jpg);
+    background-size: cover;
+    }
+    
+    .redes {
+    background-image: url(../images/background-NUEVO2.jpg);
+    background-size: cover;
+    align-items: center;
+    }
+}
+
+
+@media (min-width:769px) {
+
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+header a#logo {
+    width: 390px;
+    height: 125px;
+    }
+
+header a#cart {
+    display: flex;
+    width: 10%;
+    height: 27px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo img {
+    width: 63%;
+    height: 100%;
+}
+
+.barra-busqueda {
+    width: 400px;
+    height: 40px;
+    margin-top: 60px;
+    margin-right: 210px;
+}
+
+form {
+    width:100%;
+    height: 30px;
+    }
+.busqueda {
+    width:91.8%;
+    height: 30px;
+    }
+
+button {
+    width: 24px;
+    height: 40px;
+}
+
+.fa-magnifying-glass {
+    font-size: 17px;
+    }
+
+.fa-cart-shopping {
+    font-size:20px;
+    position:relative;
+    }
+
+ul {
+    justify-content: flex-end;
+    }
+li {
+    margin: 0px 10px;
+    }
+
+.seleccionar-categoria {
+    display: flex;
+    justify-content: space-around;
+    }
+
+.seleccionar-categoria p {
+    display: block;
+    }
+
+.seleccionar-categoria form {
+    display:none;
+    }
+
+.article {
+    width: 90%;
+    margin-top: 0%;
+    }
+
+.carrusel {
+    width: 45%;
+    margin-top: 5%;
+    }
+
+.presentacion {
+    width: 45%;
+    margin-top: 5%;
+    }
+
+#descripcion {
+    width: 100%;
+    }
+
+.presentacion p {
+    width: 45%;
+    font-size: 16.5px;
+    padding-left: 10px;
+    }
+
+h2 {
+    font-size: 32px;
+    }
+
+#resenas {
+    width: 100%;
+    }
+    
+
+.relacionados .carrusel-fotos {
+        width: 65%;
+        position: relative;
+        margin-left: auto;
+        margin-right: 2%;
+    }
+
+.relacionados button {
+        display: none;
+    }
+
+li#foto6, li#foto7 {
+        display: block;
+    }
+
+footer {
+        justify-content: space-between;
+    }
+
+.footer1 {
+        width: 50%;
+    }
+
+.footer1 a {
+        width: 44%;
+        padding-left: 10px;
+    }
+
+.redes {
+        width: 50%;
+    }
+
+.redes p {
+        margin: 0px;
+        margin-top: 10px;
+        text-align: center;
+        flex-basis: 100%;
+        height: 20%;
+        padding: 0px;
+    }
+
+#c6 {
+        margin-left: auto;
+        margin-right: 5px;
+        margin-bottom: 15%;
+    }
+
+#c7 {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 15%;
+    }
+
+#c8 {
+        margin-right: auto;
+        margin-left: 5px;
+        margin-bottom: 15%;
+    }
+
+.footer2 a {
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+
+main form#Add button {
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+    color: #00204D;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+main form#Add {
+        display: flex;
+        width: 90%;
+        margin: 0% 0% 0% 0%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        margin-bottom: 60px;
+    }
+}

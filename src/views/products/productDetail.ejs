@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+        <link href="/css/stylesPD.css" rel="stylesheet">
+        <title>Full Shape</title>
+    </head>
+    <body>
+        <%- include("../partials/header") %>
+        <main>
+            <div class="carrusel">
+                <img class="article" src="/images/products/<%= product.productMainImage %>" alt="">
+                <ul class="carrusel-fotos">
+                    <li id="foto1"><img id="c1"src="/images/products/<%= product.productMainImage %>" alt=""></li>
+                    <li id="foto2"><img id="c2"src="/images/products/<%= product.productMainImage %>" alt=""></li>
+                    <li id="foto3"><img id="c3"src="/images/products/<%= product.productMainImage %>" alt=""></li>
+                </ul>
+            </div>
+            <div class="presentacion">
+                <h2><%= product.productName %></h1>
+                <p class="pp">Categoría - <%= category.categoryName %></p>
+                <p class="pp">Código del producto</p>
+                <p class="pp">Estado - <%= status.statusName %></p>
+                <p class="pp"><%= product.productCode %></p>
+                <h2 id="precio">$<%= product.productUnitPrice.toLocaleString('es-Ar') %></h2>
+                <p class="disponibilidad">Disponibles - 3 unidades</p>
+                <p id="descripcion"><%= product.productDescription %></p>
+                <p id="resenas">Reseñas - <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 25 Reseñas</p>
+            </div>
+            <form id="Add" method="POST" action="/shoppingcart/<%= product.productId %>/add">
+                <div id="amountC">
+                <p>Añadir <select id="amount" name="amount">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select> al carrito</p>
+               </div>
+                <button type="submit">¡Agregar al carrito!</button>
+            </form>
+            <div class="detalle">
+                <h3>DESCRIPCIÓN DETALLADA</h3>
+                <p class="detail"><%= product.productDescription %></p>
+                <h3>Especificaciones técnicas</h3>
+                <ul class="techspecs">
+                    <% if (product.productColorId != null) { %>
+                        <li class="specs">Color - <%= color.colorName %></li>
+                    <% } %>
+                    <% if (product.productSizeId != null) { %>
+                        <li class="specs">Talle - <%= size.sizeName %></li>
+                    <% } %>
+                        <li class="specs">Estado - <%= status.statusName %></li>
+                </ul>
+            </div>
+            <div class="relacionados">
+                <h3>Productos relacionados:</h3>
+                <ul class="carrusel-fotos">
+
+                    <% for (let i=0; i<relatedProducts.length; i++) { %>
+                        <% if (relatedProducts[i].productId != "" && relatedProducts[i].productId != product.productId) { %>
+                        <li id="foto<%=i%>" <% if(i < 6) { %>
+                            ><a href = '/products/<%= relatedProducts[i].productId %>'class= "c"><img src="/images/products/<%= relatedProducts[i].productMainImage %>" alt=""></a></li>
+                        <% } %>
+                            <% } %>
+                <% } %>
+                </ul>
+                <button><i class="fa-solid fa-arrow-left"></i></button>
+                <button><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <a id="edit" href="/products/<%= product.productId %>/edit"><button>Editar producto</button></a>
+            <form id="delete" action="/products/<%= product.productId %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit">Eliminar</button>
+            </form>
+        </main>
+        <%- include("../partials/footer") %>
+    </body>
+</html>
